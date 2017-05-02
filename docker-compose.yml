@@ -1,0 +1,23 @@
+version: '3'
+services:
+  server:
+    build: .
+    ports:
+      - "8080:4000"
+    volumes:
+      - .:/app
+      - /app/_build
+    command: sh -c "mix deps.get && mix phx.server"
+    environment:
+      MONGODB_USER: "root"
+      MONGODB_DATABASE: "weatherdb"
+      MONGODB_PASS: "pass1234"
+      MONGODB_URL: "db"
+  db:
+    image: "tutum/mongodb:3.2"
+    ports:
+      - "27017:27017"
+    environment:
+      MONGODB_USER: "root"
+      MONGODB_DATABASE: "weatherdb"
+      MONGODB_PASS: "pass1234"
