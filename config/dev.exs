@@ -11,8 +11,14 @@ config :advanced_project, AdvancedProject.Web.Endpoint,
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
-  watchers: [node: ["node_modules/brunch/bin/brunch", "watch", "--stdin",
+  watchers: [node: ["node_modules/webpack/bin/webpack.js", 
+                    "--watch-stdin", 
+                    "--watch-poll", 
+                    "--progress", 
+                    "--color",
                     cd: Path.expand("../assets", __DIR__)]]
+  # watchers: [npm: ["run", "watch",
+                    # cd: Path.expand("../assets", __DIR__)]]
 
 # ## SSL Support
 #
@@ -54,4 +60,8 @@ config :advanced_project, :db,
   username: System.get_env("MONGODB_USER"),
   password: System.get_env("MONGODB_PASS"),
   hostname: System.get_env("MONGODB_URL"),
+  # database: "weatherdb",
+  # username: "root",
+  # password: "pass1234",
+  # hostname: "localhost",
   port: 27017
