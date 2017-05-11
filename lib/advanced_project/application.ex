@@ -6,17 +6,19 @@ defmodule AdvancedProject.Application do
   def start(_type, _args) do
     import Supervisor.Spec
 
-    # Define workers and child supervisors to be supervised
-    children = [
-      # Start the Ecto repository
-      worker(Mongo, [[
+    mongo_config = [
         hostname: Application.get_env(:advanced_project, :db)[:hostname],
         port: Application.get_env(:advanced_project, :db)[:port],
         database: Application.get_env(:advanced_project, :db)[:database],
         username: Application.get_env(:advanced_project, :db)[:username],
         password: Application.get_env(:advanced_project, :db)[:password],
         name: :mongo
-        ]]),
+        ]
+
+    # Define workers and child supervisors to be supervised
+    children = [
+      # Start the Ecto repository
+      worker(Mongo, [mongo_config]),
       # Start the endpoint when the application starts
       supervisor(AdvancedProject.Web.Endpoint, []),
       # Start your own worker by calling: AdvancedProject.Worker.start_link(arg1, arg2, arg3)

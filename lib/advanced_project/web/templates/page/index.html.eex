@@ -8,11 +8,11 @@
     <meta name="author" content="">
 
     <title>Weather aggregator</title>
-    <link rel="stylesheet" href="<%= static_path(@conn, "/semantic.min.css") %>">
+    <link rel="stylesheet" href="<%= static_path(@conn, "/bundle/semantic.min.css") %>">
   </head>
 
   <body>
     <div id="main"></div>
-    <script src="<%= static_path(@conn, "/app.js") %>"></script>
+    <script src="<%= static_path(@conn, "/bundle/app.js") %>"></script>
   </body>
 </html>

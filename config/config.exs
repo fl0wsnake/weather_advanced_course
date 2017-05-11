@@ -6,8 +6,8 @@
 use Mix.Config
 
 # General application configuration
-config :advanced_project,
-  ecto_repos: [AdvancedProject.Repo]
+# config :advanced_project,
+#   ecto_repos: [:db]
 
 # Configures the endpoint
 config :advanced_project, AdvancedProject.Web.Endpoint,

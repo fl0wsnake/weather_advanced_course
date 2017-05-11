@@ -1,7 +1,7 @@
 defmodule AdvancedProject.Web.Endpoint do
   use Phoenix.Endpoint, otp_app: :advanced_project
 
-  socket "/socket", AdvancedProject.Web.UserSocket
+  # socket "/socket", AdvancedProject.Web.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
