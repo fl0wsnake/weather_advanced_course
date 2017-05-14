@@ -37,7 +37,8 @@ defmodule AdvancedProject.Mixfile do
      {:cowboy, "~> 1.0"},
      {:mongodb, ">= 0.0.0"},
      {:poolboy, ">= 0.0.0"},
-     {:timex, "~> 3.0"}]
+     {:timex, "~> 3.0"},
+     {:httpoison, "~> 0.11.1"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.

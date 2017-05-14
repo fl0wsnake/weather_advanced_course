@@ -15,14 +15,10 @@ defmodule AdvancedProject.Application do
         name: :mongo
         ]
 
-    # Define workers and child supervisors to be supervised
     children = [
-      # Start the Ecto repository
       worker(Mongo, [mongo_config]),
-      # Start the endpoint when the application starts
       supervisor(AdvancedProject.Web.Endpoint, []),
-      # Start your own worker by calling: AdvancedProject.Worker.start_link(arg1, arg2, arg3)
-      # worker(AdvancedProject.Worker, [arg1, arg2, arg3]),
+      worker(AdvancedProject.Weather.FetchScheduler, []),
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
