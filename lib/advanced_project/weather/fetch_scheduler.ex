@@ -1,23 +1,21 @@
 defmodule AdvancedProject.Weather.FetchScheduler do
   use GenServer, Timex
-
-  # def scheduled_time_utc, do: ~T[12:00:00]
-
-  # def cities, do: ~w(Kharkiv)
-
+  
   def start_link do
     config = %{
       scheduled_time_utc: ~T[12:00:00],
-      cities: ~w(Kharkiv),
+      # cities: ~w(Kharkiv),
       services: %{
         openweathermap: %{
           url: "api.openweathermap.org/data/2.5/forecast/daily?APPID=d940bb0c241d25dacfac9456eae23e7a&id=706483&units=metric&cnt=10",
-          fetch_module: :"AdvancedProject.Weather.OpenweathermapFetcher"
+          fetch_module: OpenweathermapFetcher,
+          forecast_history_collection: "openweathermap_forecasts",
+          
         },
-        apixu: %{
-          url: "http://api.apixu.com/v1/forecast.json?key=543e9179295647ddb97181714171105&q=Kharkiv&days=10",
-          fetch_module: :"AdvancedProject.Weather.ApixuFetcher"
-        }
+        # apixu: %{
+        #   url: "http://api.apixu.com/v1/forecast.json?key=543e9179295647ddb97181714171105&q=Kharkiv&days=10",
+        #   fetch_module: :"AdvancedProject.Weather.ApixuFetcher"
+        # }
       },
       coeffs: %{
         temp: 20,
@@ -30,34 +28,36 @@ defmodule AdvancedProject.Weather.FetchScheduler do
       # sum = b + bq + bq^2 + .. + bq^(days - 1)
       days: 10,
       q: 0.8,
-      sum: 1024.0,
+      sum: 1024.0
     }
 
     GenServer.start_link(__MODULE__, config)
   end
 
-  def init(state) do
+  def init(config) do
     Timex.now()
-    |> get_time_until_next_fetch(state.scheduled_time_utc)
+    |> get_time_until_next_fetch(config.scheduled_time_utc)
     |> schedule_fetch
     
-    {:ok, state}
+    {:ok, config}
   end
 
-  def handle_info(:fetch, state) do
+  def handle_info(:fetch, config) do
     Timex.now()
-    |> get_time_until_next_fetch(state.scheduled_time_utc)
+    |> get_time_until_next_fetch(config.scheduled_time_utc)
     |> schedule_fetch
 
-    do_fetch()
+    do_fetch(config)
 
-    {:noreply, state}
+    {:noreply, config}
   end
 
-  def do_fetch() do
+  def do_fetch(config) do
     IO.puts (Timex.now() |> Timex.format("{ISO:Extended}") |> elem(1)) <> " Fetching..."
 
-    # Mongo.ins
+    config.services |> Enum.each(fn {k, v} -> 
+      error_value = v.fetch_module.fetch_and_reduce(config)
+    end)
 
     IO.puts (Timex.now() |> Timex.format("{ISO:Extended}") |> elem(1)) <> " Fetched successfully."
   end
@@ -72,7 +72,7 @@ defmodule AdvancedProject.Weather.FetchScheduler do
     Timex.diff(scheduled_time, time_from, :milliseconds)
   end
 
-  defp schedule_fetch(time_after) do
+  def schedule_fetch(time_after) do
     Process.send_after(self(), :fetch, time_after)
   end
 end

@@ -1,29 +1,40 @@
 defmodule AdvancedProject.Weather.OpenweathermapFetcher do
-    def fetch(config) do
+    def fetch_and_reduce(config) do
         config = Map.merge(config, %{
-            rain: 10,
-            forecast_history_collection: "openweathermap_forecasts"
+            rain: 10
         })
 
-        json = HTTPoison.get config.services.openweathermap.url
-        todays = Poison.Parser.parse!(json)
-        todays_forecasts = todays["list"]
+        todays = fetch(config)
+        todays_forecasts = elem(todays, 1)["list"]
         dt = todays_forecasts[0]["dt"]
 
-        if (Mongo.find(:mongo, config.forecast_history_collection, %{}, sort: [{"list.0.dt", -1}], limit: 1)
-        |> Enum.to_list)[0]["list"][0]["dt"] == dt do
-            {:already_done}
+        prev_forecasts = Mongo.find(:mongo, config.services.openweathermap.forecast_history_collection, %{}, 
+        sort: [{"list.0.dt", -1}],
+        limit: config.days - 1,
+        skip: 1) 
+        |> Enum.to_list
+        |> Enum.map(fn x -> x["list"] end)
+        |> Enum.filter(fn x -> dt - x[0]["dt"] <= (config.days - 1) * 86400 end)
+
+        reduce_to_err_value(prev_forecasts, todays_forecasts[0], config)
+    end
+
+    def fetch(config) do
+        last_forecast = Enum.to_list(
+            Mongo.find(:mongo, config.services.openweathermap.forecast_history_collection, %{}, sort: [{"list.0.dt", -1}], limit: 1)
+            )[0]
+        
+        last_dt = last_forecast["list"][0]["dt"]
+
+        if Timex.from_unix(last_dt).day == Timex.today().day do
+            
+            {:already_done, last_forecast}
         else
-            prev_forecasts = Mongo.find(:mongo, config.forecast_history_collection, %{}, sort: [{"list.0.dt", -1}], limit: config.days - 1) 
-            |> Enum.to_list
-            |> Enum.map(fn x -> x["list"] end)
-            |> Enum.filter(fn x -> dt - x[0]["dt"] <= (config.days - 1) * 86400 end)
+            json = HTTPoison.get config.services.openweathermap.url
+            todays_forecast = Poison.Parser.parse!(json)
+            Mongo.insert_one(:mongo, config.services.openweathermap.forecast_history_collection, todays_forecast)
 
-            v = reduce_to_err_value(prev_forecasts, todays_forecasts[0], config)
-
-            Mongo.insert_one(:mongo, config.forecast_history_collection, todays)
-
-            {:ok, v}
+            {:ok, todays_forecast}
         end
     end
 
