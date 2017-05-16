@@ -25,3 +25,48 @@ config :logger, :console,
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
+
+cfg = [
+  scheduled_time_utc: ~T[12:00:00],
+  # cities: ~w(Kharkiv),
+  services: %{
+    openweathermap: %{
+      url: "api.openweathermap.org/data/2.5/forecast/daily?APPID=d940bb0c241d25dacfac9456eae23e7a&id=706483&units=metric&cnt=10",
+      fetch_module: OpenweathermapFetcher,
+    },
+    # apixu: %{
+    #   url: "http://api.apixu.com/v1/forecast.json?key=543e9179295647ddb97181714171105&q=Kharkiv&days=10",
+    #   fetch_module: :"AdvancedProject.Weather.ApixuFetcher"
+    # }
+  },
+  coeffs: %{
+    temp: 20,
+    humidity: 20,
+    pressure: 20,
+    wind_kph: 10,
+    wind_mph: 16, 
+    clouds: 30
+  },
+  # sum = b + bq + bq^2 + .. + bq^(days - 1)
+  days_in_deviation: 10,
+  deviations_in_sum: 30,
+  q: 0.8,
+  sum: 1024.0
+]
+
+config :advanced_project, AdvancedProject.Weather.FetchScheduler,
+  cfg
+
+
+config :advanced_project, AdvancedProject.Weather.OpenweathermapFetcher
+  cfg 
+config :advanced_project, AdvancedProject.Weather.OpenweathermapFetcher
+  [coeffs: %{
+      rain: 10
+    }]
+
+
+config :advanced_project, AdvancedProject.Weather.ApixuFetcher
+  cfg 
+
+

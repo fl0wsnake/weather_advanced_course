@@ -9,8 +9,6 @@ defmodule AdvancedProject.Weather.FetchScheduler do
         openweathermap: %{
           url: "api.openweathermap.org/data/2.5/forecast/daily?APPID=d940bb0c241d25dacfac9456eae23e7a&id=706483&units=metric&cnt=10",
           fetch_module: OpenweathermapFetcher,
-          forecast_history_collection: "openweathermap_forecasts",
-          
         },
         # apixu: %{
         #   url: "http://api.apixu.com/v1/forecast.json?key=543e9179295647ddb97181714171105&q=Kharkiv&days=10",
@@ -26,7 +24,8 @@ defmodule AdvancedProject.Weather.FetchScheduler do
         clouds: 30
       },
       # sum = b + bq + bq^2 + .. + bq^(days - 1)
-      days: 10,
+      days_in_deviation: 10,
+      deviations_in_sum: 30,
       q: 0.8,
       sum: 1024.0
     }
@@ -35,6 +34,8 @@ defmodule AdvancedProject.Weather.FetchScheduler do
   end
 
   def init(config) do
+    
+
     Timex.now()
     |> get_time_until_next_fetch(config.scheduled_time_utc)
     |> schedule_fetch
@@ -47,16 +48,18 @@ defmodule AdvancedProject.Weather.FetchScheduler do
     |> get_time_until_next_fetch(config.scheduled_time_utc)
     |> schedule_fetch
 
-    do_fetch(config)
+    do_all_fetching(config)
 
     {:noreply, config}
   end
 
-  def do_fetch(config) do
+  def do_all_fetching(config) do
     IO.puts (Timex.now() |> Timex.format("{ISO:Extended}") |> elem(1)) <> " Fetching..."
 
     config.services |> Enum.each(fn {k, v} -> 
-      error_value = v.fetch_module.fetch_and_reduce(config)
+      deviation = v.fetch_module.fetch_and_reduce(config)
+
+      v.cache_deviation(deviation)
     end)
 
     IO.puts (Timex.now() |> Timex.format("{ISO:Extended}") |> elem(1)) <> " Fetched successfully."

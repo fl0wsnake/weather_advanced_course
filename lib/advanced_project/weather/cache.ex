@@ -6,6 +6,8 @@ defmodule AdvancedProject.Weather.Cache do
     end
 
     def init(state) do
+        
+
         {:ok, state}
     end
 

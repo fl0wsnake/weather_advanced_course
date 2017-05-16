@@ -1,44 +1,33 @@
 defmodule AdvancedProject.Weather.OpenweathermapFetcher do
-    def fetch_and_reduce(config) do
-        config = Map.merge(config, %{
-            rain: 10
-        })
+    @forecast_history_collection "openweathermap_collection"
+    # @forecast_deviation_collection "openweathermap_deviations"
 
-        todays = fetch(config)
-        todays_forecasts = elem(todays, 1)["list"]
+    def fetch_and_reduce(config) do
+        todays = fetch(config.services.openweathermap.url)
+        todays_forecasts = todays["list"]
         dt = todays_forecasts[0]["dt"]
 
-        prev_forecasts = Mongo.find(:mongo, config.services.openweathermap.forecast_history_collection, %{}, 
+        prev_forecasts = Mongo.find(:mongo, @forecast_history_collection, %{}, 
         sort: [{"list.0.dt", -1}],
-        limit: config.days - 1,
-        skip: 1) 
+        limit: config.days_in_deviation - 1,
+        projection: "list") 
         |> Enum.to_list
-        |> Enum.map(fn x -> x["list"] end)
-        |> Enum.filter(fn x -> dt - x[0]["dt"] <= (config.days - 1) * 86400 end)
+        # |> Enum.map(fn x -> x["list"] end)
+        |> Enum.filter(fn x -> dt - x[0]["dt"] <= (config.days_in_deviation - 1) * 86400 end)
 
-        reduce_to_err_value(prev_forecasts, todays_forecasts[0], config)
+        Mongo.insert_one(:mongo, @forecast_history_collection, todays_forecasts)
+
+        get_reduced_deviation(prev_forecasts, todays_forecasts[0], config)
     end
 
-    def fetch(config) do
-        last_forecast = Enum.to_list(
-            Mongo.find(:mongo, config.services.openweathermap.forecast_history_collection, %{}, sort: [{"list.0.dt", -1}], limit: 1)
-            )[0]
-        
-        last_dt = last_forecast["list"][0]["dt"]
+    def fetch(url) do
+        json = HTTPoison.get url
+        todays_forecast = Poison.Parser.parse!(json)
 
-        if Timex.from_unix(last_dt).day == Timex.today().day do
-            
-            {:already_done, last_forecast}
-        else
-            json = HTTPoison.get config.services.openweathermap.url
-            todays_forecast = Poison.Parser.parse!(json)
-            Mongo.insert_one(:mongo, config.services.openweathermap.forecast_history_collection, todays_forecast)
-
-            {:ok, todays_forecast}
-        end
+        todays_forecast
     end
 
-    def reduce_to_err_value(prev_forecasts, actual, config) do
+    def get_reduced_deviation(prev_forecasts, actual, config) do
         q = prev_forecasts |> Enum.reduce(0, fn(it, acc) -> 
                 days_before = (actual["dt"] - it[0]["dt"]) / 86400
                 acc + config.q |> :math.pow(days_before) 
@@ -48,11 +37,11 @@ defmodule AdvancedProject.Weather.OpenweathermapFetcher do
 
         prev_forecasts |> Enum.reduce(0, fn(it, acc) -> 
             days_before = (actual["dt"] - it[0]["dt"]) / 86400
-            :math.pow(acc + b * config.q, days_before) * get_err(it[days_before], actual, config.coeffs)
+            :math.pow(acc + b * config.q, days_before) * get_deviation(it[days_before], actual, config.coeffs)
         end)
     end
 
-    def get_err(forecast, actual, coeffs) do
+    def get_deviation(forecast, actual, coeffs) do
         abs(mean(actual["temp"]) - mean(forecast["temp"])) * coeffs.temp +
         abs(actual["humidity"] - forecast["humidity"]) * coeffs.humidity +
         abs(actual["pressure"] - forecast["pressure"]) * coeffs.pressure +
@@ -62,4 +51,17 @@ defmodule AdvancedProject.Weather.OpenweathermapFetcher do
     end
 
     def mean(temp), do: (temp["morn"] + temp["day"] + temp["eve"] + temp["night"]) / 4
+
+    # def cache_deviation(deviation) do
+    #     Mongo.insert_one!(:mongo, @forecast_deviation_collection, %{"deviation" => deviation})
+    # end
+
+    def fill_devaition_list(config) do
+        forecasts = Mongo.find(:mongo, config.forecast_history_collection, %{}, 
+            sort: [{"list.0.dt", -1}],
+            projection: "list",
+            limit: config.deviations_in_sum + config.days_in_deviation - 1) 
+            |> Enum.to_list
+        
+    end
 end
