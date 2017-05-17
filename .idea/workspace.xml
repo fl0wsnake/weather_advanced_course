@@ -10,6 +10,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/advanced_project/weather/apixu.com/apixu_fetcher.ex" afterPath="$PROJECT_DIR$/lib/advanced_project/weather/apixu.com/apixu_fetcher.ex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/advanced_project/weather/cache.ex" afterPath="$PROJECT_DIR$/lib/advanced_project/weather/cache.ex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/advanced_project/weather/fetch_scheduler.ex" afterPath="$PROJECT_DIR$/lib/advanced_project/weather/fetch_scheduler.ex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/advanced_project/weather/fetcher.ex" afterPath="$PROJECT_DIR$/lib/advanced_project/weather/fetcher.ex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/advanced_project/weather/openweathermap.org/openweathermap_weather.ex" afterPath="$PROJECT_DIR$/lib/advanced_project/weather/openweathermap.org/openweathermap_weather.ex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/advanced_project/weather/weather.ex" afterPath="$PROJECT_DIR$/lib/advanced_project/weather/weather.ex" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -27,15 +29,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="openweathermap_weather.ex" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/advanced_project/weather/openweathermap.org/openweathermap_weather.ex">
+      <file leaf-file-name="cache.ex" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/advanced_project/weather/cache.ex">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="36" column="3" lean-forward="true" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
-              <folding>
-                <marker date="1495039108195" expanded="true" signature="680:708" ph="&quot;openweathermap_collection&quot;" />
-                <marker date="1495039108195" expanded="true" signature="952:980" ph="&quot;openweathermap_collection&quot;" />
-              </folding>
+            <state relative-caret-position="324">
+              <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -54,13 +53,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lib/advanced_project/weather/fetch_scheduler.ex" />
         <option value="$PROJECT_DIR$/lib/advanced_project/weather/apixu.com/apixu_fetcher.ex" />
         <option value="$PROJECT_DIR$/config/config.exs" />
-        <option value="$PROJECT_DIR$/lib/advanced_project/weather/openweathermap.org/openweathermap_weather.ex" />
         <option value="$PROJECT_DIR$/lib/advanced_project/application.ex" />
-        <option value="$PROJECT_DIR$/lib/advanced_project/weather/cache.ex" />
+        <option value="$PROJECT_DIR$/lib/advanced_project/weather/openweathermap.org/openweathermap_weather.ex" />
+        <option value="$PROJECT_DIR$/lib/advanced_project/weather/fetch_scheduler.ex" />
         <option value="$PROJECT_DIR$/lib/advanced_project/weather/fetcher.ex" />
+        <option value="$PROJECT_DIR$/lib/advanced_project/weather/cache.ex" />
       </list>
     </option>
   </component>
@@ -344,12 +343,12 @@
       <option name="presentableId" value="Default" />
       <updated>1495033002917</updated>
       <workItem from="1495033004500" duration="150000" />
-      <workItem from="1495033237515" duration="10941000" />
+      <workItem from="1495033237515" duration="13507000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11091000" />
+    <option name="totallyTimeSpent" value="13657000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -361,7 +360,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1295" height="1047" extended-state="0" />
+    <frame x="-7" y="0" width="1295" height="1047" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20484754" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -564,16 +563,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="34" column="36" lean-forward="false" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
-          <folding>
-            <marker date="1495038912048" expanded="true" signature="223:233" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/web/controllers/page_controller_test.exs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -666,67 +655,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/advanced_project/weather/fetch_scheduler.ex">
+    <entry file="file://$PROJECT_DIR$/config/config.exs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" column="6" lean-forward="false" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="90" />
+        <state relative-caret-position="268">
+          <caret line="34" column="36" lean-forward="false" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
           <folding>
-            <marker date="1495035716737" expanded="true" signature="49:1362" ph="do: ..." />
-            <marker date="1495035716737" expanded="true" signature="58:74" ph="..." />
-            <marker date="1495035716737" expanded="true" signature="83:114" ph="..." />
-            <marker date="1495035716737" expanded="true" signature="135:186" ph="do: ..." />
-            <marker date="1495035716737" expanded="true" signature="206:334" ph="do: ..." />
-            <marker date="1495035716737" expanded="true" signature="369:528" ph="do: ..." />
-            <marker date="1495035716737" expanded="true" signature="972:1264" ph="do: ..." />
-            <marker date="1495035716737" expanded="true" signature="1299:1358" ph="do: ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/advanced_project/weather/cache.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="43" column="61" lean-forward="false" selection-start-line="43" selection-start-column="61" selection-end-line="43" selection-end-column="61" />
-          <folding>
-            <marker date="1495047243728" expanded="true" signature="40:1834" ph="do: ..." />
-            <marker date="1495047243728" expanded="true" signature="51:60" ph="..." />
-            <marker date="1495047243728" expanded="true" signature="81:151" ph="do: ..." />
-            <marker date="1495047243728" expanded="true" signature="162:562" ph="&quot;...&quot;" />
-            <marker date="1495047243728" expanded="true" signature="583:1120" ph="do: ..." />
-            <marker date="1495047243728" expanded="true" signature="658:1077" ph="-&gt; ..." />
-            <marker date="1495047243728" expanded="true" signature="1311:1589" ph="do: ..." />
-            <marker date="1495047243728" expanded="true" signature="1640:1714" ph="do: ..." />
+            <marker date="1495038912048" expanded="true" signature="223:233" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/advanced_project/weather/fetcher.ex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="41" lean-forward="false" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="41" />
+        <state relative-caret-position="684">
+          <caret line="38" column="20" lean-forward="false" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
           <folding>
-            <marker date="1495047243784" expanded="true" signature="42:2588" ph="do: ..." />
-            <marker date="1495047243784" expanded="true" signature="55:95" ph="..." />
-            <marker date="1495047243784" expanded="true" signature="123:846" ph="do: ..." />
-            <marker date="1495047243784" expanded="true" signature="189:825" ph="-&gt; ..." />
-            <marker date="1495047243784" expanded="true" signature="579:644" ph="-&gt; ..." />
-            <marker date="1495047243784" expanded="true" signature="867:945" ph="do: ..." />
-            <marker date="1495047243784" expanded="true" signature="1064:1521" ph="do: ..." />
-            <marker date="1495047243784" expanded="true" signature="1124:1234" ph="-&gt; ..." />
-            <marker date="1495047243784" expanded="true" signature="1336:1500" ph="-&gt; ..." />
-            <marker date="1495047243784" expanded="true" signature="1623:2008" ph="do: ..." />
+            <marker date="1495048900244" expanded="true" signature="42:2748" ph="do: ..." />
+            <marker date="1495048900244" expanded="true" signature="55:95" ph="..." />
+            <marker date="1495048900244" expanded="true" signature="123:920" ph="do: ..." />
+            <marker date="1495048900244" expanded="true" signature="283:796" ph="-&gt; ..." />
+            <marker date="1495048900244" expanded="true" signature="542:607" ph="-&gt; ..." />
+            <marker date="1495048900244" expanded="true" signature="941:1019" ph="do: ..." />
+            <marker date="1495048900244" expanded="true" signature="1138:1681" ph="do: ..." />
+            <marker date="1495048900244" expanded="true" signature="1198:1308" ph="-&gt; ..." />
+            <marker date="1495048900244" expanded="true" signature="1341:1673" ph="do: ..." />
+            <marker date="1495048900244" expanded="true" signature="1472:1644" ph="-&gt; ..." />
+            <marker date="1495048900244" expanded="true" signature="1783:2168" ph="do: ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/advanced_project/weather/fetch_scheduler.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding>
+            <marker date="1495047996816" expanded="true" signature="49:979" ph="do: ..." />
+            <marker date="1495047996816" expanded="true" signature="58:74" ph="..." />
+            <marker date="1495047996816" expanded="true" signature="83:114" ph="..." />
+            <marker date="1495047996816" expanded="true" signature="135:186" ph="do: ..." />
+            <marker date="1495047996816" expanded="true" signature="206:334" ph="do: ..." />
+            <marker date="1495047996816" expanded="true" signature="369:528" ph="do: ..." />
+            <marker date="1495047996816" expanded="true" signature="589:881" ph="do: ..." />
+            <marker date="1495047996816" expanded="true" signature="916:975" ph="do: ..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/advanced_project/weather/openweathermap.org/openweathermap_weather.ex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="36" column="3" lean-forward="true" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
+        <state relative-caret-position="72">
+          <caret line="4" column="34" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="34" />
           <folding>
-            <marker date="1495039108195" expanded="true" signature="680:708" ph="&quot;openweathermap_collection&quot;" />
-            <marker date="1495039108195" expanded="true" signature="952:980" ph="&quot;openweathermap_collection&quot;" />
+            <marker date="1495047822008" expanded="true" signature="56:1193" ph="do: ..." />
+            <marker date="1495047822008" expanded="true" signature="130:199" ph="&quot;...&quot;" />
+            <marker date="1495047822008" expanded="true" signature="222:650" ph="do: ..." />
+            <marker date="1495047822008" expanded="true" signature="279:625" ph="-&gt; ..." />
+            <marker date="1495047822008" expanded="true" signature="686:937" ph="do: ..." />
+            <marker date="1495047822008" expanded="true" signature="714:742" ph="&quot;openweathermap_collection&quot;" />
+            <marker date="1495047822008" expanded="true" signature="962:1043" ph="do: ..." />
+            <marker date="1495047822008" expanded="true" signature="996:1024" ph="&quot;openweathermap_collection&quot;" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/advanced_project/weather/cache.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>

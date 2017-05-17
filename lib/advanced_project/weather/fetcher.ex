@@ -2,23 +2,25 @@ defmodule AdvancedProject.Weather.Fetcher do
     alias AdvancedProject.Weather.{Weather, Cache}
 
     def do_all_fetching() do
+        IO.puts (Timex.now() |> Timex.format("{ISO:Extended}") |> elem(1)) <> " Fetching..."
+
         cfg(:services) |> Enum.each(fn {service_name, service} ->
-#               deviation = v.fetch_module.fetch_and_reduce()
-#               v.cache_deviation(deviation)
             response = fetch(service.url)
 
-            forecast = service.weather.of([response])
-            actual = hd(service.weather.of([response]))
+            forecast = service.weather.of(response)
+            actual = hd(forecast)
 
             prev_forecasts = service.weather.get_last_forecasts(cfg(:days_in_deviation) - 1)
             |> Enum.filter(fn fc -> actual.dt - hd(fc).dt <= (cfg(:days_in_deviation) - 1) * 86400 end)
 
+
             deviation = get_reduced_deviation(prev_forecasts, actual)
+            Cache.put(service_name, actual, {actual.dt, deviation})
 
             service.weather.save(response)
-
-            Cache.put(service_name, {actual.dt, deviation})
         end)
+
+        IO.puts (Tmex.now() |> Timex.format("{ISO:Extended}") |> elem(1)) <> " Fetched successfully."
     end
 
     def fetch(url) do
@@ -33,12 +35,15 @@ defmodule AdvancedProject.Weather.Fetcher do
             acc + :math.pow(cfg(:q), days_before)
         end)
 
-        b = cfg(:series_sum) / q
-
-        prev_forecasts |> Enum.reduce(0, fn(fc, acc) ->
-            days_before = (actual.dt - hd(fc).dt) / 86400
-            acc + b * :math.pow(cfg(:q), days_before) * get_deviation(Enum.at(fc, days_before), actual)
-        end)
+        if q == 0 do
+          9000000000
+        else
+            b = cfg(:series_sum) / q
+            prev_forecasts |> Enum.reduce(0, fn(fc, acc) ->
+                days_before = (actual.dt - hd(fc).dt) / 86400
+                acc + b * :math.pow(cfg(:q), days_before) * get_deviation(Enum.at(fc, days_before), actual)
+            end)
+        end
     end
 
     @spec get_reduced_deviation(Weather, Weather) :: Float

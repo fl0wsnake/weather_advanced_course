@@ -26,18 +26,6 @@ defmodule AdvancedProject.Weather.FetchScheduler do
     {:noreply, state}
   end
 
-  # def do_all_fetching() do
-  #   IO.puts (Timex.now() |> Timex.format("{ISO:Extended}") |> elem(1)) <> " Fetching..."
-
-  #   cfg(:services) |> Enum.each(fn {k, v} -> 
-  #     deviation = v.fetch_module.fetch_and_reduce()
-
-  #     v.cache_deviation(deviation)
-  #   end)
-
-  #   IO.puts (Timex.now() |> Timex.format("{ISO:Extended}") |> elem(1)) <> " Fetched successfully."
-  # end
-
   def get_time_until_next_fetch(time_from, scheduled_time) do    
     today_or_tomorrow = if time_from.hour - scheduled_time.hour < 0, do: 0, else: 1
 

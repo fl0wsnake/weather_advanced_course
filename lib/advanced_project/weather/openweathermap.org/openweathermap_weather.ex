@@ -1,10 +1,12 @@
 defmodule AdvancedProject.Weather.OpenweathermapWeather do
     @forecast_history_collection "openweathermap_collection"
 
-    def of(col) do
-        col
-        |> Enum.map(fn a -> 
-            a["list"]
+    @doc """
+        Maps forecast right out of json into [%Weather{}]
+    """
+
+    def of(forecast) do
+        forecast["list"]
             |> Enum.map(fn b ->
                 %Weather{
                     dt: b["dt"],
@@ -16,15 +18,14 @@ defmodule AdvancedProject.Weather.OpenweathermapWeather do
                     rain: if b["rain"], do: 1, else: 0
                 }
             end)
-        end)
     end
 
     def get_last_forecasts(count) do
       Mongo.find(:mongo, @forecast_history_collection, %{},
                            sort: [{"list.0.dt", -1}],
                            limit: count)
+                           |> Enum.map(of)
                            |> Enum.to_list
-                           |> of
     end
 
     def save(forecast) do
