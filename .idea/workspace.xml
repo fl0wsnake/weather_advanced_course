@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="62ba43f6-d22f-4ebd-9464-265cff4ff201" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Elixir_SDK.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/advanced_project/weather/openweathermap.org/openweathermap_fetcher.ex" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.exs" afterPath="$PROJECT_DIR$/config/config.exs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/advanced_project/application.ex" afterPath="$PROJECT_DIR$/lib/advanced_project/application.ex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/advanced_project/weather/apixu.com/apixu_fetcher.ex" afterPath="$PROJECT_DIR$/lib/advanced_project/weather/apixu.com/apixu_fetcher.ex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/advanced_project/weather/cache.ex" afterPath="$PROJECT_DIR$/lib/advanced_project/weather/cache.ex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/advanced_project/weather/fetch_scheduler.ex" afterPath="$PROJECT_DIR$/lib/advanced_project/weather/fetch_scheduler.ex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/advanced_project/weather/weather.ex" afterPath="$PROJECT_DIR$/lib/advanced_project/weather/weather.ex" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="advanced_project" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="openweathermap_weather.ex" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/advanced_project/weather/openweathermap.org/openweathermap_weather.ex">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="36" column="3" lean-forward="true" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
+              <folding>
+                <marker date="1495039108195" expanded="true" signature="680:708" ph="&quot;openweathermap_collection&quot;" />
+                <marker date="1495039108195" expanded="true" signature="952:980" ph="&quot;openweathermap_collection&quot;" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>mongo.</find>
+      <find>of</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/lib/advanced_project/weather/fetch_scheduler.ex" />
+        <option value="$PROJECT_DIR$/lib/advanced_project/weather/apixu.com/apixu_fetcher.ex" />
+        <option value="$PROJECT_DIR$/config/config.exs" />
+        <option value="$PROJECT_DIR$/lib/advanced_project/weather/openweathermap.org/openweathermap_weather.ex" />
+        <option value="$PROJECT_DIR$/lib/advanced_project/application.ex" />
+        <option value="$PROJECT_DIR$/lib/advanced_project/weather/cache.ex" />
+        <option value="$PROJECT_DIR$/lib/advanced_project/weather/fetcher.ex" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/assets/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
+    <option name="width" value="1295" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advanced_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advanced_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advanced_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advanced_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advanced_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advanced_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advanced_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advanced_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advanced_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advanced_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advanced_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advanced_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advanced_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advanced_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weather" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advanced_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advanced_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advanced_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weather" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="openweathermap.org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advanced_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advanced_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="MixExUnitRunConfigurationType" factoryName="Elixir Mix ExUnit" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="passParentEnvs" value="false" />
+      <option name="programParameters" />
+      <option name="workingDirectory" value="" />
+      <module />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="62ba43f6-d22f-4ebd-9464-265cff4ff201" name="Default" comment="" />
+      <created>1495033002917</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1495033002917</updated>
+      <workItem from="1495033004500" duration="150000" />
+      <workItem from="1495033237515" duration="10941000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="11091000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="0" width="1295" height="1047" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20484754" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/lib/advanced_project/weather/apixu.com/apixu_fetcher.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="2" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/prod.secret.exs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1494358563773" expanded="true" signature="4:14" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ProgramData/chocolatey/lib/Elixir/lib/elixir/ebin/Elixir.Kernel.beam">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="367" column="6" lean-forward="false" selection-start-line="367" selection-start-column="6" selection-end-line="367" selection-end-column="6" />
+          <folding>
+            <marker date="1487254607000" expanded="true" signature="78:8357" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="111:145" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="172:206" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="233:267" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="294:328" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="347:381" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="405:439" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="467:501" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="524:558" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="583:617" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="638:672" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="697:731" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="764:798" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="828:862" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="891:925" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="958:992" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="1018:1052" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="1082:1116" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="1143:1177" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="1208:1242" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="1273:1307" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="1339:1373" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="1395:1429" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="1455:1489" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="1522:1556" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="1583:1617" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="1650:1684" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="1723:1757" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="1781:1815" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="1842:1876" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="1900:1934" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="1962:1996" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="2023:2057" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="2081:2115" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="2143:2177" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="2200:2234" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="2261:2295" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="2324:2358" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="2391:2425" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="2454:2488" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="2517:2551" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="2580:2614" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="2643:2677" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="2706:2740" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="2769:2803" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="2832:2866" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="2895:2929" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="2958:2992" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="3021:3055" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="3084:3118" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="3148:3182" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="3211:3245" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="3272:3306" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="3334:3368" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="3399:3433" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="3450:3453" ph="..." />
+            <marker date="1487254607000" expanded="true" signature="3454:3488" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="3505:3512" ph="..." />
+            <marker date="1487254607000" expanded="true" signature="3513:3547" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="3569:3603" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="3629:3663" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="3690:3724" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="3751:3785" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="3822:3856" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="3879:3913" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="3934:3968" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="3985:4019" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="4040:4074" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="4096:4130" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="4147:4181" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="4202:4236" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="4258:4292" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="4313:4347" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="4368:4402" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="4424:4458" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="4480:4514" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="4537:4571" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="4593:4627" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="4648:4682" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="4704:4738" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="4759:4793" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="4809:4843" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="4865:4899" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="4925:4959" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="4991:5025" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="5046:5080" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="5102:5136" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="5156:5190" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="5211:5245" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="5262:5296" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="5335:5369" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="5407:5441" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="5464:5498" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="5513:5547" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="5567:5601" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="5625:5659" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="5679:5713" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="5735:5769" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="5794:5828" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="5851:5885" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="5906:5940" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="5964:5998" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="6026:6060" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="6083:6117" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="6137:6171" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="6190:6224" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="6246:6280" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="6299:6333" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="6353:6387" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="6412:6446" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="6467:6501" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="6520:6554" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="6590:6624" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="6643:6677" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="6698:6732" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="6752:6786" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="6806:6840" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="6862:6896" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="6920:6954" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="6969:7003" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="7020:7054" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="7070:7104" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="7127:7161" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="7190:7224" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="7251:7285" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="7305:7339" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="7357:7391" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="7406:7440" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="7461:7495" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="7513:7547" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="7573:7607" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="7630:7664" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="7695:7729" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="7755:7789" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="7823:7857" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="7876:7910" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="7933:7967" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="7987:8021" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="8045:8079" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="8097:8131" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="8146:8180" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="8198:8232" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="8255:8289" ph="do: ..." />
+            <marker date="1487254607000" expanded="true" signature="8319:8353" ph="do: ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.exs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="34" column="36" lean-forward="false" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+          <folding>
+            <marker date="1495038912048" expanded="true" signature="223:233" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/web/controllers/page_controller_test.exs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1494477902627" expanded="true" signature="49:242" ph="do: ..." />
+            <marker date="1494477902627" expanded="true" signature="58:86" ph="..." />
+            <marker date="1494477902627" expanded="true" signature="118:238" ph="do: ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/advanced_project/web/web.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1493726111156" expanded="true" signature="30:1623" ph="do: ..." />
+            <marker date="1493726111156" expanded="true" signature="46:469" ph="&quot;...&quot;" />
+            <marker date="1493726111156" expanded="true" signature="488:690" ph="do: ..." />
+            <marker date="1493726111156" expanded="true" signature="501:684" ph="do: ..." />
+            <marker date="1493726111156" expanded="true" signature="514:564" ph="..." />
+            <marker date="1493726111156" expanded="true" signature="578:676" ph="..." />
+            <marker date="1493726111156" expanded="true" signature="703:1213" ph="do: ..." />
+            <marker date="1493726111156" expanded="true" signature="716:1207" ph="do: ..." />
+            <marker date="1493726111156" expanded="true" signature="729:841" ph="..." />
+            <marker date="1493726111156" expanded="true" signature="910:985" ph="..." />
+            <marker date="1493726111156" expanded="true" signature="1051:1063" ph="..." />
+            <marker date="1493726111156" expanded="true" signature="1078:1199" ph="..." />
+            <marker date="1493726111156" expanded="true" signature="1228:1337" ph="do: ..." />
+            <marker date="1493726111156" expanded="true" signature="1241:1331" ph="do: ..." />
+            <marker date="1493726111156" expanded="true" signature="1254:1268" ph="..." />
+            <marker date="1493726111156" expanded="true" signature="1282:1323" ph="..." />
+            <marker date="1493726111156" expanded="true" signature="1353:1449" ph="do: ..." />
+            <marker date="1493726111156" expanded="true" signature="1366:1443" ph="do: ..." />
+            <marker date="1493726111156" expanded="true" signature="1379:1394" ph="..." />
+            <marker date="1493726111156" expanded="true" signature="1408:1435" ph="..." />
+            <marker date="1493726111156" expanded="true" signature="1458:1529" ph="&quot;...&quot;" />
+            <marker date="1493726111156" expanded="true" signature="1578:1619" ph="do: ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/advanced_project/web/router.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1493726111139" expanded="true" signature="37:556" ph="do: ..." />
+            <marker date="1493726111139" expanded="true" signature="46:74" ph="..." />
+            <marker date="1493726111139" expanded="true" signature="96:246" ph="do: ..." />
+            <marker date="1493726111139" expanded="true" signature="264:300" ph="do: ..." />
+            <marker date="1493726111139" expanded="true" signature="335:438" ph="do: ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/advanced_project/web/gettext.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1493726111250" expanded="true" signature="38:734" ph="do: ..." />
+            <marker date="1493726111250" expanded="true" signature="54:688" ph="&quot;...&quot;" />
+            <marker date="1493726111250" expanded="true" signature="695:730" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/advanced_project/application.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="44" lean-forward="false" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+          <folding>
+            <marker date="1495045064056" expanded="true" signature="38:1094" ph="do: ..." />
+            <marker date="1495045064056" expanded="true" signature="47:58" ph="..." />
+            <marker date="1495045064056" expanded="true" signature="198:1090" ph="do: ..." />
+            <marker date="1495045064056" expanded="true" signature="212:227" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/advanced_project/weather/weather.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+          <folding>
+            <marker date="1495032406659" expanded="true" signature="42:196" ph="do: ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/advanced_project/weather/fetch_scheduler.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="29" column="6" lean-forward="false" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="90" />
+          <folding>
+            <marker date="1495035716737" expanded="true" signature="49:1362" ph="do: ..." />
+            <marker date="1495035716737" expanded="true" signature="58:74" ph="..." />
+            <marker date="1495035716737" expanded="true" signature="83:114" ph="..." />
+            <marker date="1495035716737" expanded="true" signature="135:186" ph="do: ..." />
+            <marker date="1495035716737" expanded="true" signature="206:334" ph="do: ..." />
+            <marker date="1495035716737" expanded="true" signature="369:528" ph="do: ..." />
+            <marker date="1495035716737" expanded="true" signature="972:1264" ph="do: ..." />
+            <marker date="1495035716737" expanded="true" signature="1299:1358" ph="do: ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/advanced_project/weather/cache.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="43" column="61" lean-forward="false" selection-start-line="43" selection-start-column="61" selection-end-line="43" selection-end-column="61" />
+          <folding>
+            <marker date="1495047243728" expanded="true" signature="40:1834" ph="do: ..." />
+            <marker date="1495047243728" expanded="true" signature="51:60" ph="..." />
+            <marker date="1495047243728" expanded="true" signature="81:151" ph="do: ..." />
+            <marker date="1495047243728" expanded="true" signature="162:562" ph="&quot;...&quot;" />
+            <marker date="1495047243728" expanded="true" signature="583:1120" ph="do: ..." />
+            <marker date="1495047243728" expanded="true" signature="658:1077" ph="-&gt; ..." />
+            <marker date="1495047243728" expanded="true" signature="1311:1589" ph="do: ..." />
+            <marker date="1495047243728" expanded="true" signature="1640:1714" ph="do: ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/advanced_project/weather/fetcher.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="41" lean-forward="false" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="41" />
+          <folding>
+            <marker date="1495047243784" expanded="true" signature="42:2588" ph="do: ..." />
+            <marker date="1495047243784" expanded="true" signature="55:95" ph="..." />
+            <marker date="1495047243784" expanded="true" signature="123:846" ph="do: ..." />
+            <marker date="1495047243784" expanded="true" signature="189:825" ph="-&gt; ..." />
+            <marker date="1495047243784" expanded="true" signature="579:644" ph="-&gt; ..." />
+            <marker date="1495047243784" expanded="true" signature="867:945" ph="do: ..." />
+            <marker date="1495047243784" expanded="true" signature="1064:1521" ph="do: ..." />
+            <marker date="1495047243784" expanded="true" signature="1124:1234" ph="-&gt; ..." />
+            <marker date="1495047243784" expanded="true" signature="1336:1500" ph="-&gt; ..." />
+            <marker date="1495047243784" expanded="true" signature="1623:2008" ph="do: ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/advanced_project/weather/openweathermap.org/openweathermap_weather.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="36" column="3" lean-forward="true" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
+          <folding>
+            <marker date="1495039108195" expanded="true" signature="680:708" ph="&quot;openweathermap_collection&quot;" />
+            <marker date="1495039108195" expanded="true" signature="952:980" ph="&quot;openweathermap_collection&quot;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

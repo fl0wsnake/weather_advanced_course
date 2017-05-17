@@ -32,7 +32,7 @@ cfg = [
   services: %{
     openweathermap: %{
       url: "api.openweathermap.org/data/2.5/forecast/daily?APPID=d940bb0c241d25dacfac9456eae23e7a&id=706483&units=metric&cnt=10",
-      fetch_module: OpenweathermapFetcher,
+      weather: OpenweathermapWeather
     },
     # apixu: %{
     #   url: "http://api.apixu.com/v1/forecast.json?key=543e9179295647ddb97181714171105&q=Kharkiv&days=10",
@@ -54,15 +54,14 @@ cfg = [
 
 config AdvancedProject.Weather.FetchScheduler, cfg
 config AdvancedProject.Weather.Cache, cfg
+config AdvancedProject.Weather.Fetcher, cfg
 
-
-config AdvancedProject.Weather.OpenweathermapFetcher, cfg 
+#config AdvancedProject.Weather.OpenweathermapWeather, cfg
 # config AdvancedProject.Weather.OpenweathermapFetcher, [
 #   rain: 10
 # ]
 
 
-
-config AdvancedProject.Weather.ApixuFetcher, cfg 
+#config AdvancedProject.Weather.ApixuFetcher, cfg
 
 

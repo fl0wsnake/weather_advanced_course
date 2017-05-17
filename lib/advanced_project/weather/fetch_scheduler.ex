@@ -1,5 +1,6 @@
 defmodule AdvancedProject.Weather.FetchScheduler do
   use GenServer, Timex
+  alias AdvancedProject.Weather.Fetcher
   
   def start_link do
 
@@ -20,22 +21,22 @@ defmodule AdvancedProject.Weather.FetchScheduler do
     |> get_time_until_next_fetch(cfg(:scheduled_time_utc))
     |> schedule_fetch
 
-    do_all_fetching()
+    Fetcher.do_all_fetching()
 
     {:noreply, state}
   end
 
-  def do_all_fetching() do
-    IO.puts (Timex.now() |> Timex.format("{ISO:Extended}") |> elem(1)) <> " Fetching..."
+  # def do_all_fetching() do
+  #   IO.puts (Timex.now() |> Timex.format("{ISO:Extended}") |> elem(1)) <> " Fetching..."
 
-    cfg(:services) |> Enum.each(fn {k, v} -> 
-      deviation = v.fetch_module.fetch_and_reduce()
+  #   cfg(:services) |> Enum.each(fn {k, v} -> 
+  #     deviation = v.fetch_module.fetch_and_reduce()
 
-      v.cache_deviation(deviation)
-    end)
+  #     v.cache_deviation(deviation)
+  #   end)
 
-    IO.puts (Timex.now() |> Timex.format("{ISO:Extended}") |> elem(1)) <> " Fetched successfully."
-  end
+  #   IO.puts (Timex.now() |> Timex.format("{ISO:Extended}") |> elem(1)) <> " Fetched successfully."
+  # end
 
   def get_time_until_next_fetch(time_from, scheduled_time) do    
     today_or_tomorrow = if time_from.hour - scheduled_time.hour < 0, do: 0, else: 1

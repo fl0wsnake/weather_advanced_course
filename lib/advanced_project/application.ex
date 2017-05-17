@@ -18,7 +18,8 @@ defmodule AdvancedProject.Application do
     children = [
       worker(Mongo, [mongo_config]),
       supervisor(AdvancedProject.Web.Endpoint, []),
-      worker(AdvancedProject.Weather.FetchScheduler, []),
+      worker(AdvancedProject.Weather.Fetcher, []),
+      worker(AdvancedProject.Weather.Cache, [])
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
