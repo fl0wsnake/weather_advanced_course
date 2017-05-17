@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node ./node_modules/webpack/bin/webpack.js",
-    "deploy": "node ./node_modules/webpack/bin/webpack.js -p",
-    "watch": "node ./node_modules/webpack/bin/webpack.js --progress --color --watch-stdin --watch-poll"
+    "dev": "webpack",
+    "build:prod": "webpack -p",
+    "watch": "webpack --progress --color --watch-stdin --watch-poll"
   },
   "keywords": [],
   "author": "",

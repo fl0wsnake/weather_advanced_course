@@ -12,15 +12,15 @@ module.exports = {
   },
   module: {
     rules: [
-      // {
-      //   test: /\.(css|scss)$/,
-      //   use: [
-      //     'style-loader',
-      //     'css-loader',
-      //   ]
-      // },
       {
-        test: /\.(html|css)$/,
+        test: /\.(css|scss)$/,
+        use: [
+          'style-loader',
+          'css-loader',
+        ]
+      },
+      {
+        test: /\.(html)$/,
         loader: 'file-loader?name=[name].[ext]',
       },
       {

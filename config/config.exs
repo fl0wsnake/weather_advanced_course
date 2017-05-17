@@ -39,34 +39,30 @@ cfg = [
     #   fetch_module: :"AdvancedProject.Weather.ApixuFetcher"
     # }
   },
-  coeffs: %{
-    temp: 20,
-    humidity: 20,
-    pressure: 20,
-    wind_kph: 10,
-    wind_mph: 16, 
-    clouds: 30
-  },
-  # sum = b + bq + bq^2 + .. + bq^(days - 1)
+  temp: 20,
+  humidity: 20,
+  pressure: 20,
+  wind_kph: 10,
+  wind_mph: 16, 
+  clouds: 30,
   days_in_deviation: 10,
   deviations_in_sum: 30,
   q: 0.8,
-  sum: 1024.0
+  series_sum: 10.0,
+  rain: 100
 ]
 
-config :advanced_project, AdvancedProject.Weather.FetchScheduler,
-  cfg
+config AdvancedProject.Weather.FetchScheduler, cfg
+config AdvancedProject.Weather.Cache, cfg
 
 
-config :advanced_project, AdvancedProject.Weather.OpenweathermapFetcher
-  cfg 
-config :advanced_project, AdvancedProject.Weather.OpenweathermapFetcher
-  [coeffs: %{
-      rain: 10
-    }]
+config AdvancedProject.Weather.OpenweathermapFetcher, cfg 
+# config AdvancedProject.Weather.OpenweathermapFetcher, [
+#   rain: 10
+# ]
 
 
-config :advanced_project, AdvancedProject.Weather.ApixuFetcher
-  cfg 
+
+config AdvancedProject.Weather.ApixuFetcher, cfg 
 
 
