@@ -28,7 +28,13 @@ defmodule AdvancedProject.Weather.Cache do
 
             deviation_list = for i <- 0..cfg(:deviations_in_sum) + cfg(:days_in_deviation) - 3,
             [x | xs] <- [Enum.slice(forecasts, i..i + cfg(:days_in_deviation))],
-            do: {x[0].dt, get_reduced_deviation(xs, x[0])}
+            do: {
+                x[0].dt,
+                get_reduced_deviation(
+                    xs |> Enum.filter(fn fc -> actual.dt - hd(fc).dt <= (cfg(:days_in_deviation) - 1) * 86400 end),
+                    x[0]
+                )
+            }
 
             state = put_in(state[:services][service_name][:last_forecast], hd(last_forecasts))
             state = put_in(state[:services][service_name][:deviations], deviation_list)
@@ -38,7 +44,7 @@ defmodule AdvancedProject.Weather.Cache do
     end
 
     def calc_total_deviation do
-      # ..
+      
     end
 
     def handle_cast({:put, service_name, forecast, dt_and_deviation}, state) do

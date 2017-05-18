@@ -46,7 +46,7 @@ defmodule AdvancedProject.Weather.Fetcher do
         end
     end
 
-    @spec get_reduced_deviation(Weather, Weather) :: Float
+    @spec get_deviation(Weather, Weather) :: Float
      def get_deviation(forecast, actual) do
          abs(actual.temp - forecast.temp) * cfg(:temp) +
          abs(actual.humidity - forecast.humidity) * cfg(:humidity) +
