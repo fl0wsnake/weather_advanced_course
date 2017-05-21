@@ -20,7 +20,7 @@ defmodule AdvancedProject.Weather.Fetcher do
             service.weather.save(response)
         end)
 
-        IO.puts (Tmex.now() |> Timex.format("{ISO:Extended}") |> elem(1)) <> " Fetched successfully."
+        IO.puts (Timex.now() |> Timex.format("{ISO:Extended}") |> elem(1)) <> " Fetched successfully."
     end
 
     def fetch(url) do

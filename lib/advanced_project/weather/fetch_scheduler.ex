@@ -38,4 +38,6 @@ defmodule AdvancedProject.Weather.FetchScheduler do
   def schedule_fetch(time_after) do
     Process.send_after(self(), :fetch, time_after)
   end
+
+  def cfg(a), do: (Application.get_env(__MODULE__, a))
 end

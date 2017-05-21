@@ -16,7 +16,7 @@ defmodule AdvancedProject.Weather.OpenweathermapWeather do
                     pressure: b["pressure"],
                     wind: b["speed"],
                     clouds: b["clouds"],
-                    rain: if b["rain"], do: 1, else: 0
+                    rain: (if b["rain"], do: 1, else: 0)
                 }
             end)
     end
@@ -25,7 +25,7 @@ defmodule AdvancedProject.Weather.OpenweathermapWeather do
       Mongo.find(:mongo, @forecast_history_collection, %{},
                            sort: [{"list.0.dt", -1}],
                            limit: count)
-                           |> Enum.map(of)
+                           |> Enum.map(&of/1)
                            |> Enum.to_list
     end
 
@@ -34,6 +34,4 @@ defmodule AdvancedProject.Weather.OpenweathermapWeather do
     end
 
     def mean(temp), do: (temp["morn"] + temp["day"] + temp["eve"] + temp["night"]) / 4
-
-    def cfg(a), do: (Application.get_env(__MODULE__, a))
 end

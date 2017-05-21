@@ -18,7 +18,7 @@ defmodule AdvancedProject.Application do
     children = [
       worker(Mongo, [mongo_config]),
       supervisor(AdvancedProject.Web.Endpoint, []),
-      worker(AdvancedProject.Weather.Fetcher, []),
+      worker(AdvancedProject.Weather.FetchScheduler, []),
       worker(AdvancedProject.Weather.Cache, [])
     ]
 

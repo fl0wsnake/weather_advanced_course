@@ -14,9 +14,11 @@ defmodule AdvancedProject.Web.Router do
   end
 
   scope "/", AdvancedProject.Web do
-    pipe_through :browser # Use the default browser stack
+    pipe_through :browser
 
     get "/", PageController, :index
+
+    get "/data", PageController, :data
   end
 
   # Other scopes may use custom stacks.

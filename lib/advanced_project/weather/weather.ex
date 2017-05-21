@@ -1,18 +1,20 @@
 defmodule AdvancedProject.Weather.Weather do
+    alias __MODULE__
+
     @enforce_keys [:dt, :temp, :humidity, :pressure, :wind, :clouds, :rain]
     defstruct [:dt, :temp, :humidity, :pressure, :wind, :clouds, :rain]
 
     @spec get_reduced_deviation([[Weather]], Weather) :: Float
     def get_reduced_deviation(prev_forecasts, actual) do
-        qs = prev_forecasts |> Enum.reduce(0, fn(fc, acc) ->
+        sum_qs = prev_forecasts |> Enum.reduce(0, fn(fc, acc) ->
             days_before = (actual.dt - hd(fc).dt) / 86400
             acc + :math.pow(cfg(:daily_deviation_q), days_before)
         end)
 
-        if qs == 0 do
+        if sum_qs == 0 do
           9000000000
         else
-            b = cfg(:daily_deviation_series) / qs
+            b = cfg(:daily_deviation_series) / sum_qs
             prev_forecasts |> Enum.reduce(0, fn(fc, acc) ->
                 days_before = (actual.dt - hd(fc).dt) / 86400
                 acc +
@@ -35,12 +37,12 @@ defmodule AdvancedProject.Weather.Weather do
 
     @spec get_deviation_list([[Weather]]) :: [{Integer, Float}]
     def get_deviation_list(last_forecasts) do
-        for i <- 0..cfg(:total_deviation_devs) + cfg(:daily_deviation_devs) - 3,
-            [x | xs] <- [Enum.slice(forecasts, i..i + cfg(:daily_deviation_devs))],
+        for i <- 0..cfg(:total_deviation_devs) - 1,
+            [x | xs] <- [Enum.slice(last_forecasts, i..i + cfg(:daily_deviation_devs) - 1)],
             do: {
-                x[0].dt,
+                hd(x).dt,
                 get_reduced_deviation(
-                    xs |> Enum.filter(fn fc -> actual.dt - hd(fc).dt <= (cfg(:daily_deviation_devs) - 1) * 86400 end),
+                    xs |> Enum.filter(fn fc -> hd(x).dt - hd(fc).dt <= (cfg(:daily_deviation_devs) - 1) * 86400 end),
                     x[0]
                 )
             }
@@ -48,20 +50,20 @@ defmodule AdvancedProject.Weather.Weather do
 
     @spec get_total_deviation([{Integer, Float}]) :: Float
     def get_total_deviation(deviation_list) do
-        qs = deviation_list |> Enum.reduce(0, fn(dev, acc) ->
-            days_before = (hd(deviation_list) |> elem(0) - dev |> elem(0)) / 86400
+        sum_qs = deviation_list |> Enum.reduce(0, fn(dev, acc) ->
+            days_before = (elem(hd(deviation_list), 0) - elem(dev, 0)) / 86400
             acc + :math.pow(cfg(:total_deviation_q), days_before)
         end)
 
-        if qs == 0 do
+        if sum_qs == 0 do
             9000000000
         else
-            b = cfg(:total_deviation_series) / qs
+            b = cfg(:total_deviation_series) / sum_qs
             deviation_list |> Enum.reduce(0, fn(dev, acc) ->
-                days_before = (hd(deviation_list) |> elem(0) - dev |> elem(0)) / 86400
+                days_before = (elem(hd(deviation_list), 0) - elem(dev, 0)) / 86400
                 acc +
                 b *
-                dev |> elem(1)
+                elem(dev, 0) *
                 :math.pow(cfg(:total_deviation_q), days_before)
             end)
         end
@@ -69,17 +71,23 @@ defmodule AdvancedProject.Weather.Weather do
 
     @spec get_final_forecast([{[Weather], Float}]) :: [Weather]
     def get_final_forecast(forecasts_with_deviations) do
-    starting_acc_fc = forecasts_with_deviations
-    |> hd
-    |> elem(0)
-    |> Enum.map(fn w -> %Weather{dt: w.dt, temp: 0, humidity: 0, pressure: 0, wind: 0, clouds: 0, rain: 0} end)
+        example_fc = forecasts_with_deviations
+        |> Enum.find(nil, fn {forecast, _} -> forecast != nil end)
 
-    {fc_sum, dev_sum} = forecasts_with_deviations
-    |> Enum.reduce({starting_acc_fc, 0}, fn {fc, dev}, {acc_fc, acc_dev} ->
-        {acc_fc |> Enum.zip(fc |> Enum.map(fn w -> mul(w, 1/dev) end)) |> Enum.map(fn {w1, w2} -> plus(w1, w2) end), acc_dev + 1/dev}
-    end)
+        if example_fc == nil do
+            nil
+        else
+            starting_acc_fc = example_fc
+            |> elem(0)
+            |> Enum.map(fn w -> %Weather{dt: w.dt, temp: 0, humidity: 0, pressure: 0, wind: 0, clouds: 0, rain: 0} end)
 
-    fc_sum |> Enum.map(fn w -> divide(w, dev_sum) end)
+            {fc_sum, dev_sum} = forecasts_with_deviations
+            |> Enum.reduce({starting_acc_fc, 0}, fn {fc, dev}, {acc_fc, acc_dev} ->
+                {acc_fc |> Enum.zip(fc |> Enum.map(fn w -> mul(w, 1/dev) end)) |> Enum.map(fn {w1, w2} -> plus(w1, w2) end), acc_dev + 1/dev}
+            end)
+
+            fc_sum |> Enum.map(fn w -> divide(w, dev_sum) end)
+        end
     end
 
     @spec plus(Weather, Weather) :: Weather

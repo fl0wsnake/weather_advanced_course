@@ -22,12 +22,22 @@ defmodule AdvancedProject.Weather.Cache do
                 another_service: ...
             },
             final_forecast: [%Weather{}]
-        } 
+        }
     """
+    @spec init(%{}) :: {:ok, %{
+        services: %{
+            required(Atom) => %{
+                deviations: [{Int, Float}],
+                last_forecast: [%Weather{}],
+                total_deviation: Float
+            }
+        },
+        final_forecast: [%Weather{}]
+    }}
     def init(state) do
 
-        cfg(:services)
-        |> Enum.each(fn {service_name, service} ->
+        state = put_in(state[:services], cfg(:services)
+        |> Enum.reduce(%{}, fn {service_name, service}, acc ->
             last_forecasts = service.weather.get_last_forecasts(
                 cfg(:total_deviation_devs) + cfg(:daily_deviation_devs) - 1
             )
@@ -35,36 +45,29 @@ defmodule AdvancedProject.Weather.Cache do
             deviation_list = Weather.get_deviation_list(last_forecasts)
             total_deviation = Weather.get_total_deviation(deviation_list)
 
-#            state = put_in(state[:services][service_name][:last_forecast], hd(last_forecasts))
-#            state = put_in(state[:services][service_name][:deviations], deviation_list)
-#            state = put_in(state[:services][service_name][:total_deviation], total_deviation)
-
-            state = put_in(state[:services][service_name], %{
-                last_forecast: hd(last_forecasts),
+            Map.put(acc, service_name, %{
+                last_forecast: List.first(last_forecasts),
                 deviations: deviation_list,
                 total_deviation: total_deviation
             })
-        end)
+        end))
 
-        final_forecast = Weather.get_final_forecast(
-            state[:services] |> Enum.map(fn {k, v} ->
-                {v[:last_forecast], v[:total_deviation]}
-            end)
-        )
-
-        state = put_in(state[:final_forecast], final_forecast)
+        state = update_final_forecast(state)
 
         {:ok, state}
     end
 
     def handle_cast({:put, service_name, forecast, dt_and_deviation}, state) do
-        deviation_list = state[:services][service_name][:deviations]
+        deviation_list = [dt_and_deviation | state[:services][service_name][:deviations]]
         total_deviation = Weather.get_total_deviation(deviation_list)
 
-        state = put_in(state[:services][service_name][:last_forecast], forecast)
-        state = put_in(state[:services][service_name][:deviations], [dt_and_deviation | deviation_list])
-        state = put_in(state[:services][service_name][:total_deviation], total_deviation)
-        state = put_in(state[:final_forecast])
+        state = put_in(state[:services][service_name], %{
+            last_forecast: forecast,
+            deviations: deviation_list,
+            total_deviation: total_deviation
+        })
+
+        state = update_final_forecast(state)
 
         {:noreply, state}
     end
@@ -73,9 +76,25 @@ defmodule AdvancedProject.Weather.Cache do
         GenServer.cast(:cache, {:put, service, forecast, dt_and_deviation})
     end
 
-#    def handle_call({:lookup, name}, _from, names) do
-#        {:reply, Map.fetch(names, name), names}
-#    end
+    def update_final_forecast(state) do
+        final_forecast = Weather.get_final_forecast(
+            state[:services] |> Enum.map(fn {_, v} ->
+                {v[:last_forecast], v[:total_deviation]}
+            end)
+        )
+
+        put_in(state[:final_forecast], final_forecast)
+    end
+
+
+    def handle_call(:get, _from, state) do
+      {:reply, state, state}
+    end
+
+    def get do
+        GenServer.call(:cache, :get)
+    end
+
 
     def cfg(a), do: (Application.get_env(__MODULE__, a))
 end
