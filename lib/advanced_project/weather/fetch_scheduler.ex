@@ -3,7 +3,6 @@ defmodule AdvancedProject.Weather.FetchScheduler do
   alias AdvancedProject.Weather.Fetcher
   
   def start_link do
-
     GenServer.start_link(__MODULE__, %{})
   end
 

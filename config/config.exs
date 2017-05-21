@@ -45,16 +45,19 @@ cfg = [
   wind_kph: 10,
   wind_mph: 16, 
   clouds: 30,
-  days_in_deviation: 10,
-  deviations_in_sum: 30,
-  q: 0.8,
-  series_sum: 10.0,
+  daily_deviation_devs: 10,
+  total_deviation_devs: 30,
+  daily_deviation_q: 0.8,
+  total_deviation_q: 0.96,
+  daily_deviation_series: 10.0,
+  total_deviation_series: 10.0,
   rain: 100
 ]
 
 config AdvancedProject.Weather.FetchScheduler, cfg
 config AdvancedProject.Weather.Cache, cfg
 config AdvancedProject.Weather.Fetcher, cfg
+config AdvancedProject, cfg
 
 #config AdvancedProject.Weather.OpenweathermapWeather, cfg
 # config AdvancedProject.Weather.OpenweathermapFetcher, [

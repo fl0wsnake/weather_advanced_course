@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62ba43f6-d22f-4ebd-9464-265cff4ff201" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Elixir_SDK.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/advanced_project/weather/openweathermap.org/openweathermap_fetcher.ex" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.exs" afterPath="$PROJECT_DIR$/config/config.exs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/advanced_project/application.ex" afterPath="$PROJECT_DIR$/lib/advanced_project/application.ex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/advanced_project/weather/apixu.com/apixu_fetcher.ex" afterPath="$PROJECT_DIR$/lib/advanced_project/weather/apixu.com/apixu_fetcher.ex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/advanced_project/weather/cache.ex" afterPath="$PROJECT_DIR$/lib/advanced_project/weather/cache.ex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/advanced_project/weather/fetch_scheduler.ex" afterPath="$PROJECT_DIR$/lib/advanced_project/weather/fetch_scheduler.ex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/advanced_project/weather/fetcher.ex" afterPath="$PROJECT_DIR$/lib/advanced_project/weather/fetcher.ex" />
@@ -32,8 +28,8 @@
       <file leaf-file-name="cache.ex" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/advanced_project/weather/cache.ex">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+            <state relative-caret-position="525">
+              <caret line="48" column="16" lean-forward="false" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -45,6 +41,19 @@
     <findStrings>
       <find>mongo.</find>
       <find>of</find>
+      <find>days_in_deviation</find>
+      <find>days</find>
+      <find>days_in_dev</find>
+      <find>in_sum</find>
+      <find>cfg(:q</find>
+      <find>series_sum</find>
+      <find>series</find>
+      <find>def cfg</find>
+      <find>dt</find>
+      <find>:cache</find>
+      <find>cfg</find>
+      <find>last_forecast</find>
+      <find>weather.</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -54,11 +63,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/lib/advanced_project/weather/apixu.com/apixu_fetcher.ex" />
-        <option value="$PROJECT_DIR$/config/config.exs" />
         <option value="$PROJECT_DIR$/lib/advanced_project/application.ex" />
-        <option value="$PROJECT_DIR$/lib/advanced_project/weather/openweathermap.org/openweathermap_weather.ex" />
-        <option value="$PROJECT_DIR$/lib/advanced_project/weather/fetch_scheduler.ex" />
         <option value="$PROJECT_DIR$/lib/advanced_project/weather/fetcher.ex" />
+        <option value="$PROJECT_DIR$/lib/advanced_project/weather/fetch_scheduler.ex" />
+        <option value="$PROJECT_DIR$/lib/advanced_project/weather/openweathermap.org/openweathermap_weather.ex" />
+        <option value="$PROJECT_DIR$/config/config.exs" />
+        <option value="$PROJECT_DIR$/lib/advanced_project/weather/weather.ex" />
         <option value="$PROJECT_DIR$/lib/advanced_project/weather/cache.ex" />
       </list>
     </option>
@@ -73,9 +83,10 @@
     <handled-path value="$PROJECT_DIR$/assets/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="width" value="1295" />
-    <option name="height" value="1047" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -92,6 +103,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -240,8 +253,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -309,6 +320,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -335,6 +352,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="62ba43f6-d22f-4ebd-9464-265cff4ff201" name="Default" comment="" />
@@ -343,12 +363,15 @@
       <option name="presentableId" value="Default" />
       <updated>1495033002917</updated>
       <workItem from="1495033004500" duration="150000" />
-      <workItem from="1495033237515" duration="14104000" />
+      <workItem from="1495033237515" duration="19525000" />
+      <workItem from="1495271608245" duration="539000" />
+      <workItem from="1495273652644" duration="11956000" />
+      <workItem from="1495349057774" duration="8540000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14254000" />
+    <option name="totallyTimeSpent" value="40710000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -360,25 +383,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1295" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20484754" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13645834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994923" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,11 +415,100 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/lib/advanced_project/weather/weather.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1314">
+          <caret line="73" column="45" lean-forward="true" selection-start-line="73" selection-start-column="45" selection-end-line="73" selection-end-column="45" />
+          <folding>
+            <marker date="1495368854050" expanded="true" signature="42:4547" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="311:949" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="372:498" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="532:941" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="676:912" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="1042:1420" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="1529:1962" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="1823:1891" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="2067:2724" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="2129:2280" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="2314:2716" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="2461:2687" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="2844:3365" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="2941:3026" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="3156:3292" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="3207:3223" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="3254:3269" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="3331:3352" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="3432:3821" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="3883:4150" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="4218:4485" ph="do: ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/advanced_project/weather/weather.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1314">
+          <caret line="73" column="56" lean-forward="false" selection-start-line="73" selection-start-column="56" selection-end-line="73" selection-end-column="56" />
+          <folding>
+            <marker date="1495368854050" expanded="true" signature="42:4547" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="311:949" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="372:498" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="532:941" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="676:912" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="1042:1420" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="1529:1962" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="1823:1891" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="2067:2724" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="2129:2280" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="2314:2716" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="2461:2687" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="2844:3365" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="2941:3026" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="3156:3292" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="3207:3223" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="3254:3269" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="3331:3352" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="3432:3821" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="3883:4150" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="4218:4485" ph="do: ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/advanced_project/weather/weather.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1314">
+          <caret line="73" column="56" lean-forward="false" selection-start-line="73" selection-start-column="56" selection-end-line="73" selection-end-column="56" />
+          <folding>
+            <marker date="1495368854050" expanded="true" signature="42:4547" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="311:949" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="372:498" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="532:941" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="676:912" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="1042:1420" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="1529:1962" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="1823:1891" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="2067:2724" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="2129:2280" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="2314:2716" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="2461:2687" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="2844:3365" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="2941:3026" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="3156:3292" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="3207:3223" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="3254:3269" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="3331:3352" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="3432:3821" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="3883:4150" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="4218:4485" ph="do: ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/advanced_project/weather/apixu.com/apixu_fetcher.ex">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="2" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -404,16 +516,55 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1494358563773" expanded="true" signature="4:14" ph="..." />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/web/controllers/page_controller_test.exs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/advanced_project/web/web.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/advanced_project/web/router.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/advanced_project/web/gettext.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/advanced_project/application.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/test.exs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://C:/ProgramData/chocolatey/lib/Elixir/lib/elixir/ebin/Elixir.Kernel.beam">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="328">
-          <caret line="367" column="6" lean-forward="false" selection-start-line="367" selection-start-column="6" selection-end-line="367" selection-end-column="6" />
+          <caret line="137" column="11" lean-forward="false" selection-start-line="137" selection-start-column="11" selection-end-line="137" selection-end-column="11" />
           <folding>
             <marker date="1487254607000" expanded="true" signature="78:8357" ph="do: ..." />
             <marker date="1487254607000" expanded="true" signature="111:145" ph="do: ..." />
@@ -563,166 +714,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/web/controllers/page_controller_test.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1494477902627" expanded="true" signature="49:242" ph="do: ..." />
-            <marker date="1494477902627" expanded="true" signature="58:86" ph="..." />
-            <marker date="1494477902627" expanded="true" signature="118:238" ph="do: ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/advanced_project/web/web.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1493726111156" expanded="true" signature="30:1623" ph="do: ..." />
-            <marker date="1493726111156" expanded="true" signature="46:469" ph="&quot;...&quot;" />
-            <marker date="1493726111156" expanded="true" signature="488:690" ph="do: ..." />
-            <marker date="1493726111156" expanded="true" signature="501:684" ph="do: ..." />
-            <marker date="1493726111156" expanded="true" signature="514:564" ph="..." />
-            <marker date="1493726111156" expanded="true" signature="578:676" ph="..." />
-            <marker date="1493726111156" expanded="true" signature="703:1213" ph="do: ..." />
-            <marker date="1493726111156" expanded="true" signature="716:1207" ph="do: ..." />
-            <marker date="1493726111156" expanded="true" signature="729:841" ph="..." />
-            <marker date="1493726111156" expanded="true" signature="910:985" ph="..." />
-            <marker date="1493726111156" expanded="true" signature="1051:1063" ph="..." />
-            <marker date="1493726111156" expanded="true" signature="1078:1199" ph="..." />
-            <marker date="1493726111156" expanded="true" signature="1228:1337" ph="do: ..." />
-            <marker date="1493726111156" expanded="true" signature="1241:1331" ph="do: ..." />
-            <marker date="1493726111156" expanded="true" signature="1254:1268" ph="..." />
-            <marker date="1493726111156" expanded="true" signature="1282:1323" ph="..." />
-            <marker date="1493726111156" expanded="true" signature="1353:1449" ph="do: ..." />
-            <marker date="1493726111156" expanded="true" signature="1366:1443" ph="do: ..." />
-            <marker date="1493726111156" expanded="true" signature="1379:1394" ph="..." />
-            <marker date="1493726111156" expanded="true" signature="1408:1435" ph="..." />
-            <marker date="1493726111156" expanded="true" signature="1458:1529" ph="&quot;...&quot;" />
-            <marker date="1493726111156" expanded="true" signature="1578:1619" ph="do: ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/advanced_project/web/router.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1493726111139" expanded="true" signature="37:556" ph="do: ..." />
-            <marker date="1493726111139" expanded="true" signature="46:74" ph="..." />
-            <marker date="1493726111139" expanded="true" signature="96:246" ph="do: ..." />
-            <marker date="1493726111139" expanded="true" signature="264:300" ph="do: ..." />
-            <marker date="1493726111139" expanded="true" signature="335:438" ph="do: ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/advanced_project/web/gettext.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1493726111250" expanded="true" signature="38:734" ph="do: ..." />
-            <marker date="1493726111250" expanded="true" signature="54:688" ph="&quot;...&quot;" />
-            <marker date="1493726111250" expanded="true" signature="695:730" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/advanced_project/application.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="44" lean-forward="false" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
-          <folding>
-            <marker date="1495045064056" expanded="true" signature="38:1094" ph="do: ..." />
-            <marker date="1495045064056" expanded="true" signature="47:58" ph="..." />
-            <marker date="1495045064056" expanded="true" signature="198:1090" ph="do: ..." />
-            <marker date="1495045064056" expanded="true" signature="212:227" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/advanced_project/weather/weather.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
-          <folding>
-            <marker date="1495032406659" expanded="true" signature="42:196" ph="do: ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/config.exs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="34" column="36" lean-forward="false" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
-          <folding>
-            <marker date="1495038912048" expanded="true" signature="223:233" ph="..." />
-          </folding>
+        <state relative-caret-position="471">
+          <caret line="47" column="22" lean-forward="false" selection-start-line="47" selection-start-column="2" selection-end-line="47" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/advanced_project/weather/fetcher.ex">
+    <entry file="file://$PROJECT_DIR$/lib/advanced_project/weather/openweathermap.org/openweathermap_weather.ex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="38" column="20" lean-forward="false" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+        <state relative-caret-position="360">
+          <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
           <folding>
-            <marker date="1495048900244" expanded="true" signature="42:2748" ph="do: ..." />
-            <marker date="1495048900244" expanded="true" signature="55:95" ph="..." />
-            <marker date="1495048900244" expanded="true" signature="123:920" ph="do: ..." />
-            <marker date="1495048900244" expanded="true" signature="283:796" ph="-&gt; ..." />
-            <marker date="1495048900244" expanded="true" signature="542:607" ph="-&gt; ..." />
-            <marker date="1495048900244" expanded="true" signature="941:1019" ph="do: ..." />
-            <marker date="1495048900244" expanded="true" signature="1138:1681" ph="do: ..." />
-            <marker date="1495048900244" expanded="true" signature="1198:1308" ph="-&gt; ..." />
-            <marker date="1495048900244" expanded="true" signature="1341:1673" ph="do: ..." />
-            <marker date="1495048900244" expanded="true" signature="1472:1644" ph="-&gt; ..." />
-            <marker date="1495048900244" expanded="true" signature="1783:2168" ph="do: ..." />
+            <marker date="1495301687519" expanded="true" signature="56:1235" ph="do: ..." />
+            <marker date="1495301687519" expanded="true" signature="130:161" ph="..." />
+            <marker date="1495301687519" expanded="true" signature="172:241" ph="&quot;...&quot;" />
+            <marker date="1495301687519" expanded="true" signature="264:692" ph="do: ..." />
+            <marker date="1495301687519" expanded="true" signature="321:667" ph="-&gt; ..." />
+            <marker date="1495301687519" expanded="true" signature="728:979" ph="do: ..." />
+            <marker date="1495301687519" expanded="true" signature="756:784" ph="&quot;openweathermap_collection&quot;" />
+            <marker date="1495301687519" expanded="true" signature="1004:1085" ph="do: ..." />
+            <marker date="1495301687519" expanded="true" signature="1038:1066" ph="&quot;openweathermap_collection&quot;" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/advanced_project/weather/fetch_scheduler.ex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        <state relative-caret-position="396">
+          <caret line="22" column="12" lean-forward="false" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
           <folding>
-            <marker date="1495047996816" expanded="true" signature="49:979" ph="do: ..." />
-            <marker date="1495047996816" expanded="true" signature="58:74" ph="..." />
-            <marker date="1495047996816" expanded="true" signature="83:114" ph="..." />
-            <marker date="1495047996816" expanded="true" signature="135:186" ph="do: ..." />
-            <marker date="1495047996816" expanded="true" signature="206:334" ph="do: ..." />
-            <marker date="1495047996816" expanded="true" signature="369:528" ph="do: ..." />
-            <marker date="1495047996816" expanded="true" signature="589:881" ph="do: ..." />
-            <marker date="1495047996816" expanded="true" signature="916:975" ph="do: ..." />
+            <marker date="1495299729457" expanded="true" signature="49:978" ph="do: ..." />
+            <marker date="1495299729457" expanded="true" signature="58:74" ph="..." />
+            <marker date="1495299729457" expanded="true" signature="83:114" ph="..." />
+            <marker date="1495299729457" expanded="true" signature="135:185" ph="do: ..." />
+            <marker date="1495299729457" expanded="true" signature="205:333" ph="do: ..." />
+            <marker date="1495299729457" expanded="true" signature="368:527" ph="do: ..." />
+            <marker date="1495299729457" expanded="true" signature="588:880" ph="do: ..." />
+            <marker date="1495299729457" expanded="true" signature="915:974" ph="do: ..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/advanced_project/weather/openweathermap.org/openweathermap_weather.ex">
+    <entry file="file://$PROJECT_DIR$/lib/advanced_project/weather/fetcher.ex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="34" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="34" />
+        <state relative-caret-position="108">
+          <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
           <folding>
-            <marker date="1495047822008" expanded="true" signature="56:1193" ph="do: ..." />
-            <marker date="1495047822008" expanded="true" signature="130:199" ph="&quot;...&quot;" />
-            <marker date="1495047822008" expanded="true" signature="222:650" ph="do: ..." />
-            <marker date="1495047822008" expanded="true" signature="279:625" ph="-&gt; ..." />
-            <marker date="1495047822008" expanded="true" signature="686:937" ph="do: ..." />
-            <marker date="1495047822008" expanded="true" signature="714:742" ph="&quot;openweathermap_collection&quot;" />
-            <marker date="1495047822008" expanded="true" signature="962:1043" ph="do: ..." />
-            <marker date="1495047822008" expanded="true" signature="996:1024" ph="&quot;openweathermap_collection&quot;" />
+            <marker date="1495135092716" expanded="true" signature="42:1097" ph="do: ..." />
+            <marker date="1495135092716" expanded="true" signature="55:95" ph="..." />
+            <marker date="1495135092716" expanded="true" signature="123:936" ph="do: ..." />
+            <marker date="1495135092716" expanded="true" signature="283:812" ph="-&gt; ..." />
+            <marker date="1495135092716" expanded="true" signature="545:613" ph="-&gt; ..." />
+            <marker date="1495135092716" expanded="true" signature="957:1035" ph="do: ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/advanced_project/weather/weather.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="49" column="8" lean-forward="false" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
+          <folding>
+            <marker date="1495368854050" expanded="true" signature="42:4547" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="311:949" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="372:498" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="532:941" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="676:912" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="1042:1420" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="1529:1962" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="1823:1891" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="2067:2724" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="2129:2280" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="2314:2716" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="2461:2687" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="2844:3365" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="2941:3026" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="3156:3292" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="3207:3223" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="3254:3269" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="3331:3352" ph="-&gt; ..." />
+            <marker date="1495368854050" expanded="true" signature="3432:3821" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="3883:4150" ph="do: ..." />
+            <marker date="1495368854050" expanded="true" signature="4218:4485" ph="do: ..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/advanced_project/weather/cache.ex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+        <state relative-caret-position="525">
+          <caret line="48" column="16" lean-forward="false" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
           <folding />
         </state>
       </provider>

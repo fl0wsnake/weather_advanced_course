@@ -1,5 +1,6 @@
 defmodule AdvancedProject.Weather.OpenweathermapWeather do
     @forecast_history_collection "openweathermap_collection"
+    alias AdvancedProject.Weather.Weather
 
     @doc """
         Maps forecast right out of json into [%Weather{}]
