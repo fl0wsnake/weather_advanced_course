@@ -7,7 +7,7 @@ defmodule AdvancedProject.Weather.Weather do
     @spec get_reduced_deviation([[Weather]], Weather) :: Float
     def get_reduced_deviation(prev_forecasts, actual) do
         sum_qs = prev_forecasts |> Enum.reduce(0, fn(fc, acc) ->
-            days_before = (actual.dt - hd(fc).dt) / 86400
+            days_before = round((actual.dt - hd(fc).dt) / 86400)
             acc + :math.pow(cfg(:daily_deviation_q), days_before)
         end)
 
@@ -16,7 +16,7 @@ defmodule AdvancedProject.Weather.Weather do
         else
             b = cfg(:daily_deviation_series) / sum_qs
             prev_forecasts |> Enum.reduce(0, fn(fc, acc) ->
-                days_before = (actual.dt - hd(fc).dt) / 86400
+                days_before = round((actual.dt - hd(fc).dt) / 86400)
                 acc +
                 b *
                 :math.pow(cfg(:daily_deviation_q), days_before) *
@@ -43,7 +43,7 @@ defmodule AdvancedProject.Weather.Weather do
                 hd(x).dt,
                 get_reduced_deviation(
                     xs |> Enum.filter(fn fc -> hd(x).dt - hd(fc).dt <= (cfg(:daily_deviation_devs) - 1) * 86400 end),
-                    x[0]
+                    hd(x)
                 )
             }
     end
@@ -51,7 +51,7 @@ defmodule AdvancedProject.Weather.Weather do
     @spec get_total_deviation([{Integer, Float}]) :: Float
     def get_total_deviation(deviation_list) do
         sum_qs = deviation_list |> Enum.reduce(0, fn(dev, acc) ->
-            days_before = (elem(hd(deviation_list), 0) - elem(dev, 0)) / 86400
+            days_before = round((elem(hd(deviation_list), 0) - elem(dev, 0)) / 86400)
             acc + :math.pow(cfg(:total_deviation_q), days_before)
         end)
 
@@ -60,7 +60,7 @@ defmodule AdvancedProject.Weather.Weather do
         else
             b = cfg(:total_deviation_series) / sum_qs
             deviation_list |> Enum.reduce(0, fn(dev, acc) ->
-                days_before = (elem(hd(deviation_list), 0) - elem(dev, 0)) / 86400
+                days_before = round((elem(hd(deviation_list), 0) - elem(dev, 0)) / 86400)
                 acc +
                 b *
                 elem(dev, 0) *
@@ -98,7 +98,7 @@ defmodule AdvancedProject.Weather.Weather do
             temp: w1.temp + w2.temp,
             humidity: w1.humidity + w2.humidity,
             pressure: w1.pressure + w2.pressure,
-            wind: w1.speed + w2.speed,
+            wind: w1.wind + w2.wind,
             clouds: w1.clouds + w2.clouds,
             rain: w1.rain + w2.rain
         }
@@ -111,7 +111,7 @@ defmodule AdvancedProject.Weather.Weather do
             temp: w1.temp * p,
             humidity: w1.humidity * p,
             pressure: w1.pressure * p,
-            wind: w1.speed * p,
+            wind: w1.wind * p,
             clouds: w1.clouds * p,
             rain: w1.rain * p
         }
@@ -124,7 +124,7 @@ defmodule AdvancedProject.Weather.Weather do
             temp: w1.temp / p,
             humidity: w1.humidity / p,
             pressure: w1.pressure / p,
-            wind: w1.speed / p,
+            wind: w1.wind / p,
             clouds: w1.clouds / p,
             rain: w1.rain / p
         }

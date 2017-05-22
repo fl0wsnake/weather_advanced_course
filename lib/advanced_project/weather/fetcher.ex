@@ -5,9 +5,9 @@ defmodule AdvancedProject.Weather.Fetcher do
         IO.puts (Timex.now() |> Timex.format("{ISO:Extended}") |> elem(1)) <> " Fetching..."
 
         cfg(:services) |> Enum.each(fn {service_name, service} ->
-            response = fetch(service.url)
+            response_body = fetch(service.url)
 
-            forecast = service.weather.of(response)
+            forecast = service.weather.of(response_body)
             actual = hd(forecast)
 
             prev_forecasts = service.weather.get_last_forecasts(cfg(:daily_deviation_devs) - 1)
@@ -17,15 +17,16 @@ defmodule AdvancedProject.Weather.Fetcher do
             deviation = Weather.get_reduced_deviation(prev_forecasts, actual)
             Cache.put(service_name, forecast, {actual.dt, deviation})
 
-            service.weather.save(response)
+            service.weather.save(response_body)
         end)
 
         IO.puts (Timex.now() |> Timex.format("{ISO:Extended}") |> elem(1)) <> " Fetched successfully."
     end
 
     def fetch(url) do
-        json = HTTPoison.get url
-        Poison.Parser.parse!(json)
+        {:ok, %HTTPoison.Response{status_code: 200, body: body}} = HTTPoison.get url
+        {:ok, parsed} = Poison.Parser.parse(body)
+        parsed
     end
 
     def cfg(a), do: (Application.get_env(__MODULE__, a))
