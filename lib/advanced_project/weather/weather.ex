@@ -130,5 +130,5 @@ defmodule AdvancedProject.Weather.Weather do
         }
     end
 
-    def cfg(a), do: (Application.get_env(__MODULE__, a))
+    def cfg(a), do: (Application.get_env(:advanced_project, __MODULE__)[:cfg][a])
 end

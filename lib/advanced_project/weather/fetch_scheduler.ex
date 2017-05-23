@@ -1,6 +1,7 @@
 defmodule AdvancedProject.Weather.FetchScheduler do
   use GenServer, Timex
-  alias AdvancedProject.Weather.Fetcher
+  alias AdvancedProject.Weather.{Fetcher, Weather}
+  import Weather, only: [cfg: 1]
   
   def start_link do
     GenServer.start_link(__MODULE__, %{})
@@ -38,6 +39,4 @@ defmodule AdvancedProject.Weather.FetchScheduler do
   def schedule_fetch(time_after) do
     Process.send_after(self(), :fetch, time_after)
   end
-
-  def cfg(a), do: (Application.get_env(__MODULE__, a))
 end

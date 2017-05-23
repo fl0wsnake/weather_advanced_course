@@ -17,12 +17,11 @@ defmodule AdvancedProject.Web.Router do
     pipe_through :browser
 
     get "/", PageController, :index
-
-    get "/data", PageController, :data
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", AdvancedProject.Web do
-  #   pipe_through :api
-  # end
+  scope "/api", AdvancedProject.Web do
+    pipe_through :api
+
+    get "/", ApiController, :data
+  end
 end

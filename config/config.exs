@@ -26,7 +26,7 @@ config :logger, :console,
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
 
-cfg = [
+cfg = %{
   scheduled_time_utc: ~T[12:00:00],
   # cities: ~w(Kharkiv),
   services: %{
@@ -52,12 +52,9 @@ cfg = [
   daily_deviation_series: 10.0,
   total_deviation_series: 10.0,
   rain: 100
-]
+}
 
-config AdvancedProject.Weather.FetchScheduler, cfg
-config AdvancedProject.Weather.Cache, cfg
-config AdvancedProject.Weather.Fetcher, cfg
-config AdvancedProject.Weather.Weather, cfg
+config :advanced_project, AdvancedProject.Weather.Weather, [cfg: cfg]
 
 #config AdvancedProject.Weather.OpenweathermapWeather, cfg
 # config AdvancedProject.Weather.OpenweathermapFetcher, [

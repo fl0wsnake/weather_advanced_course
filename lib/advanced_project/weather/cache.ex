@@ -1,6 +1,7 @@
 defmodule AdvancedProject.Weather.Cache do
     use GenServer
     alias AdvancedProject.Weather.Weather
+    import Weather, only: [cfg: 1]
 
     def start_link do
         GenServer.start_link(__MODULE__, %{
@@ -94,7 +95,4 @@ defmodule AdvancedProject.Weather.Cache do
     def get do
         GenServer.call(:cache, :get)
     end
-
-
-    def cfg(a), do: (Application.get_env(__MODULE__, a))
 end
