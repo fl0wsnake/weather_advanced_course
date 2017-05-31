@@ -56,12 +56,11 @@ cfg = %{
 
 config :advanced_project, AdvancedProject.Weather.Weather, [cfg: cfg]
 
-#config AdvancedProject.Weather.OpenweathermapWeather, cfg
-# config AdvancedProject.Weather.OpenweathermapFetcher, [
-#   rain: 10
-# ]
-
-
-#config AdvancedProject.Weather.ApixuFetcher, cfg
+config :advanced_project, :db,
+  database: System.get_env("MONGODB_DATABASE"),
+  username: System.get_env("MONGODB_USER"),
+  password: System.get_env("MONGODB_PASS"),
+  hostname: System.get_env("MONGODB_URL"),
+  port: (System.get_env("MONGODB_PORT") || "0") |> Integer.parse() |> elem(0)
 
 

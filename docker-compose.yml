@@ -9,12 +9,13 @@ services:
     volumes:
       - .:/app
       - /app/_build
-    command: sh -c "mix deps.get && mix phx.server"
+    command: sh -c "MIX_ENV=prod mix compile && MIX_ENV=prod PORT=4000 mix phx.server"
     environment:
       MONGODB_USER: "root"
       MONGODB_DATABASE: "weatherdb"
       MONGODB_PASS: "pass1234"
       MONGODB_URL: "db"
+      MONGODB_PORT: "27017"
   db:
     image: "tutum/mongodb:3.2"
     ports:

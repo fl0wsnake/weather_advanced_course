@@ -55,13 +55,13 @@ config :logger, :console, format: "[$level] $message\n"
 config :phoenix, :stacktrace_depth, 20
 
 # Configure your database
-config :advanced_project, :db,
-  database: System.get_env("MONGODB_DATABASE"),
-  username: System.get_env("MONGODB_USER"),
-  password: System.get_env("MONGODB_PASS"),
-  hostname: System.get_env("MONGODB_URL"),
-  # database: "weatherdb",
-  # username: "root",
-  # password: "pass1234",
-  # hostname: "localhost",
-  port: 27017
+# config :advanced_project, :db,
+#   database: System.get_env("MONGODB_DATABASE"),
+#   username: System.get_env("MONGODB_USER"),
+#   password: System.get_env("MONGODB_PASS"),
+#   hostname: System.get_env("MONGODB_URL"),
+#   # database: "weatherdb",
+#   # username: "root",
+#   # password: "pass1234",
+#   # hostname: "localhost",
+#   port: System.get_env("MONGODB_PORT")
