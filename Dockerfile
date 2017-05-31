@@ -41,7 +41,7 @@ RUN mix deps.get --only prod
 RUN MIX_ENV=prod mix compile
 
 WORKDIR /app/assets
-RUN npm install --production
+RUN npm install --production --silent
 RUN npm run build:prod
 
 WORKDIR /app
