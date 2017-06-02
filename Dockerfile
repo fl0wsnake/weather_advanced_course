@@ -1,4 +1,4 @@
-FROM elixir:1.4.2
+FROM elixir:1.4.4
 
 RUN set -ex \
   && for key in \
@@ -29,22 +29,23 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
 RUN mkdir /app
 WORKDIR /app
 
-RUN npm install -g elm
-RUN npm rebuild elm
-RUN mix local.hex --force
-RUN mix local.rebar --force
-RUN mix archive.install https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez --force
-
 COPY . .
 
-RUN mix deps.get --only prod
-RUN MIX_ENV=prod mix compile
+ENV MIX_ENV=prod
+
+RUN npm install -g elm
+RUN npm rebuild elm
+
+RUN mix local.hex --force
+RUN mix local.rebar --force
+RUN mix archive.install --force \
+https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez
+RUN mix do deps.get, deps.compile
+RUN mix compile
 
 WORKDIR /app/assets
 RUN npm install --production --silent
 RUN npm run build:prod
 
 WORKDIR /app
-CMD MIX_ENV=prod PORT=80 mix phx.server
-
-EXPOSE 80
+CMD yes | mix phx.server
