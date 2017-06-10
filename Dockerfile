@@ -1,5 +1,7 @@
 FROM elixir:1.4.4
 
+ENV PORT=80
+
 RUN set -ex \
   && for key in \
     9554F04D7259F04124DE6B476D5A82AC7E37093B \
